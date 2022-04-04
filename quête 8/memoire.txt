@@ -1,0 +1,103 @@
+<?php
+    $Prenom='Yuliya';
+    $Nom='Bert';
+    $Age=55;
+    $stagiaire=TRUE;
+    
+    if ($Apprenants ==TRUE) {
+        echo" affiche  $Nom $Age $Prenom ";
+  }
+     else {
+     echo "affiche vous pouvez répéter la question " ;   
+    }
+?>
+<br>
+    <!--  -->
+     <?php
+     $errors=[];
+     if(!empty($_POST)){
+         if(empty($_POST['prenom'])){
+             $errors[]='Erreur';
+         }
+     }
+     if(empty($errors)){
+        foreach($errors as $err){
+            echo "<span style ='color:red'>$err</span><br>";
+        }
+    }
+    $errors=[];
+    if(!empty($_POST)){
+        if(empty($_POST['nom'])){
+            $errors[]='Erreur';
+        }
+    }
+    if(empty($errors)){
+       foreach($errors as $err){
+           echo "<span style ='color:red'>$err</span><br>";
+       }
+   }
+     ?>
+     <!-- print_r -->
+         <?php
+if (isset($_POST)) {
+    print_r("prenom: " . $_POST['prenom']);
+    print_r("<br>nom: " . $_POST['nom']);
+    print_r("<br>age: " . $_POST['agee']);
+    print_r("<br>taille(entre 1.6 et 2.0 m): " . $_POST['taille']);
+}
+?>
+
+      <!--  -->
+      <?php
+  $Debogage = array(
+  "prenom"=>array("prenom"),
+  "nom"=>array("nom"),
+  "age"=>array("age"),
+  "taille"=>array("taille"),
+  "Apprenants"=>array("Apprenants")
+
+);
+
+if(isset($_POST['Debogage'])){
+  foreach($Debogage as $key => $Value){
+    echo "<div  id=\"$key\">$key";
+    foreach($Value as $Value1){
+      echo "<div> $Value1 </div>";
+    }
+    echo "</div>";
+  }
+}
+
+?>
+ <!--boucle  -->
+<?php
+$exemple = "Je m'appelle Yuliya Bert j'ai 55 ans et je mesure 1,6m";
+$i=0;
+
+while ($i<10) {
+    echo "$exemple <br>" ;
+    $i++;
+}
+?>
+
+
+
+
+control / (FOR comment)
+
+$exemple0 = "Je devieNs MeIlLeur";
+$exemple0 = strtolower($exemple0);
+
+$i=0;
+
+while ($i<50) {
+    echo "$exemple0 <br>" ;
+    $i++;
+}
+
+ if(isset($_GET['boucle'])){
+        for ($ = 0; $1 < 10; $1++){
+            echo $1='je m\'appelle', $_SESSION['table']['prenom'] .' '. $_SESSION['table']['nom'] . '<br>';
+        }
+    }
+}
